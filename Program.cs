@@ -17,14 +17,23 @@ namespace Burning
         var myLocation = new Location
         {
           Id = Guid.NewGuid(),
-          Name = "da name"
+          Name = "da name",
+          Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue id metus sed lobortis. Fusce massa justo, egestas quis aliquet non, ullamcorper in purus. In facilisis tincidunt euismod."
         };
 
         col.Insert(myLocation);
       }*/
 
+      var myLocation = new Location
+      {
+        Id = Guid.NewGuid(),
+        Name = "da name",
+        Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue id metus sed lobortis. Fusce massa justo, egestas quis aliquet non, ullamcorper in purus. In facilisis tincidunt euismod."
+      };
+
       Console.Clear();
       ConsoleHelper.ShowTitle();
+      ConsoleHelper.ShowLocation(myLocation);
     }
 
     public void Run()
