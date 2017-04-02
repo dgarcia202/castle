@@ -23,6 +23,13 @@ namespace Burning
       ConsoleHelper.WriteLine(new String('=', loc.Name.Length), Globals.LocationColor);
       ConsoleHelper.WriteLine(loc.Description, Globals.LocationColor);
       Console.WriteLine();
+
+      foreach(var item in loc.Items)
+      {
+        ConsoleHelper.WriteLine("Hay " + item.Description, Globals.LocationColor);
+      }
+
+      Console.WriteLine();
     }
 
     public static void WriteLine(string text, ConsoleColor foreColor)

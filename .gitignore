@@ -302,5 +302,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+<<<<<<< HEAD
 # custom
+=======
+>>>>>>> 977de5137896f01391d90af16b470c496202f9cb
 *.db
