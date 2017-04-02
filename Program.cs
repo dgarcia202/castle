@@ -8,28 +8,18 @@ namespace Burning
   {
     public void Initialize()
     {
-      // ConsoleHelper.WriteLine(Globals.Title, ConsoleColor.Cyan);
-
-      /*using(var db = new LiteDatabase(Globals.DataFile))
-      {
-        var col = db.GetCollection<Location>("locations");
-
-        var myLocation = new Location
-        {
-          Id = Guid.NewGuid(),
-          Name = "da name",
-          Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue id metus sed lobortis. Fusce massa justo, egestas quis aliquet non, ullamcorper in purus. In facilisis tincidunt euismod."
-        };
-
-        col.Insert(myLocation);
-      }*/
-
       var myLocation = new Location
       {
         Id = Guid.NewGuid(),
-        Name = "da name",
+        Name = "Oubliette",
         Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue id metus sed lobortis. Fusce massa justo, egestas quis aliquet non, ullamcorper in purus. In facilisis tincidunt euismod."
       };
+
+      using(var db = new LiteDatabase(Globals.DataFile))
+      {
+        var col = db.GetCollection<Location>("locations");
+        col.Insert(myLocation);
+      }
 
       Console.Clear();
       ConsoleHelper.ShowTitle();
