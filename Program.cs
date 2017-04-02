@@ -3,6 +3,7 @@ namespace Burning
   using Burning.Models;
   using LiteDB;
   ﻿using System;
+  using System.Linq;
 
   public class Program
   {
@@ -31,7 +32,7 @@ namespace Burning
       while(true)
       {
         var command = ConsoleHelper.ReadCommand();
-        if (command == "quit" || command == "q") {
+        if (Globals.QuitCommand.Any(x => x == command)) {
           break;
         }
       }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Burning
 {
@@ -11,5 +12,7 @@ namespace Burning
 
     public static ConsoleColor TitleColor = ConsoleColor.Cyan;
     public static ConsoleColor LocationColor = ConsoleColor.Yellow;
+
+    public static IList<string> QuitCommand = new List<string> { "quit", "q" };
   }
 }
