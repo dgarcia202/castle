@@ -8,16 +8,16 @@ namespace Burning
   public class Game
   {
     private DatabaseHelper databaseHelper = new DatabaseHelper();
+    private Location currentLocation;
 
     public void Initialize()
     {
       this.databaseHelper.Initialize();
-
-      var startingLocation = this.databaseHelper.LoadLocation(Globals.StartingLocation);
+      this.currentLocation = this.databaseHelper.LoadLocation(Globals.StartingLocation);
 
       Console.Clear();
       ConsoleHelper.ShowTitle();
-      ConsoleHelper.ShowLocation(startingLocation);
+      ConsoleHelper.ShowLocation(this.currentLocation);
     }
 
     public void Run()

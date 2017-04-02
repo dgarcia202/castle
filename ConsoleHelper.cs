@@ -1,7 +1,8 @@
 namespace Burning
 {
-  using Burning.Models;
   using System;
+
+  using Burning.Models;
 
   public static class ConsoleHelper
   {
@@ -26,7 +27,7 @@ namespace Burning
 
       foreach(var item in loc.Items)
       {
-        ConsoleHelper.WriteLine("Hay " + item.Description, Globals.LocationColor);
+        ConsoleHelper.WriteLine("Hay " + item.Name, Globals.LocationColor);
       }
 
       Console.WriteLine();
