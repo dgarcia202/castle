@@ -1,6 +1,6 @@
 namespace Burning
 {
-  using Burning.Models;
+  using Burning.Objects;
   using LiteDB;
   ﻿using System;
   using System.Linq;
@@ -8,16 +8,17 @@ namespace Burning
   public class Game
   {
     private DatabaseHelper databaseHelper = new DatabaseHelper();
-    private Location currentLocation;
+    private Player player;
 
     public void Initialize()
     {
       this.databaseHelper.Initialize();
-      this.currentLocation = this.databaseHelper.LoadLocation(Globals.StartingLocation);
+      var startingLocation = this.databaseHelper.LoadLocation(Globals.StartingLocation);
+      this.player = new Player(startingLocation);
 
       Console.Clear();
       ConsoleHelper.ShowTitle();
-      ConsoleHelper.ShowLocation(this.currentLocation);
+      ConsoleHelper.ShowLocation(this.player.CurrentLocation);
     }
 
     public void Run()

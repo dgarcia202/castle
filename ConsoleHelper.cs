@@ -2,7 +2,7 @@ namespace Burning
 {
   using System;
 
-  using Burning.Models;
+  using Burning.Objects;
 
   public static class ConsoleHelper
   {

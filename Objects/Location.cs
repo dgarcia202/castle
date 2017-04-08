@@ -1,4 +1,4 @@
-namespace Burning.Models
+namespace Burning.Objects
 {
   using System;
   using System.Collections.Generic;

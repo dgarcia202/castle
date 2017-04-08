@@ -3,7 +3,7 @@ namespace Burning
   using System;
   using System.Collections.Generic;
 
-  using Burning.Models;
+  using Burning.Objects;
 
   public class Contents
   {

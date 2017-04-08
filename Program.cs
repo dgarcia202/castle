@@ -1,6 +1,6 @@
 namespace Burning
 {
-  using Burning.Models;
+  using Burning.Objects;
   using LiteDB;
   ﻿using System;
   using System.Linq;

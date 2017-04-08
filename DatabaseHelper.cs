@@ -4,7 +4,7 @@ namespace Burning
   using System;
   using System.IO;
 
-  using Burning.Models;
+  using Burning.Objects;
 
   public class DatabaseHelper
   {
