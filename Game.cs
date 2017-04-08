@@ -1,6 +1,7 @@
 namespace Burning
 {
   using Burning.Objects;
+  using Burning.Syntax;
   using LiteDB;
   ﻿using System;
   using System.Linq;
@@ -8,6 +9,7 @@ namespace Burning
   public class Game
   {
     private DatabaseHelper databaseHelper = new DatabaseHelper();
+    private SyntaxAnalizer syntaxAnalizer = new SyntaxAnalizer();
     private Player player;
 
     public void Initialize()
